@@ -25,9 +25,8 @@ interface Props {
 
 const SideBar = ({ sideBarDesktop, sideBarMobile, companyName, toggleSideBar, navItems, pathname }: Props) => (
   <div
-    className={`d-flex flex-column ${sideBarDesktop ? classes?.sideBarClosed : ''} ${
-      sideBarMobile ? classes.sideBarMobile : ''
-    }`}
+    className={`d-flex flex-column ${sideBarDesktop ? classes?.sideBarClosed : ''} ${sideBarMobile ? classes.sideBarMobile : ''
+      }`}
   >
     <div className={`${classes.sideBar}`}>
       <Icon type="sideBarClose" className={classes.sideBarCloseIcon} onClick={toggleSideBar} />

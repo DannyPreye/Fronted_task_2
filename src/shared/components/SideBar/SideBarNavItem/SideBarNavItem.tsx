@@ -22,9 +22,8 @@ const SideBarNavItem = ({ id, title, path, icon, pathname, minimized }: Props) =
   <li className={`nav-item ${classes.navItem} ${minimized ? classes?.closed : ''}`} key={id}>
     <NavLink
       to={path}
-      className={`nav-link d-flex align-items-center ${classes.navLink} ${
-        isActive(pathname, path) ? classes?.active : ''
-      }`}
+      className={`nav-link d-flex align-items-center ${classes.navLink} ${isActive(pathname, path) ? classes?.active : ''
+        }`}
       aria-current="page"
       title={title}
     >

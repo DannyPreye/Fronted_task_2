@@ -51,6 +51,7 @@ import { SingleProjectProvider } from 'Context/Project';
 import { Notes } from 'Containers/Notes';
 import { NotesProvider } from 'Context/Notes';
 import { PhotoReport, DryingReport, ReportsAndDocuments } from 'Containers/ReportsAndDocuments';
+import { Form } from 'Components/FormNew';
 import { PrivateRoute } from './PrivateRoutes';
 import { PublicRoute } from './PublicRoutes';
 
@@ -306,6 +307,11 @@ const RocketDryRoute = () => (
     <RocketDry />
   </DashboardWrapper>
 );
+const FormRoute = () => (
+  <DashboardWrapper>
+    <Form />
+  </DashboardWrapper>
+);
 
 const NotFoundRoute = () => <NotFoundWrapper />;
 
@@ -326,6 +332,7 @@ export const Routes = () => (
       <PublicRoute exact path="/selectaccounttype" render={SelectAccountTypeRoute} />
       <PublicRoute exact path="/invite/:uuid" render={SignUpFromInviteRoute} />
 
+      <PrivateRoute exact path="/form" render={FormRoute} />
       <PrivateRoute exact path="/photoView" render={PhotoViewRoute} />
       <PrivateRoute path="/dashboard" render={DashboardRoute} />
       <PrivateRoute exact path="/welcomeback" render={WelcomeBackRoute} />
